@@ -37,7 +37,7 @@ public class Main {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("invalid.");
+                    System.out.println("invalid");
             }
         }
     }
@@ -58,7 +58,7 @@ public class Main {
 
     static void lihatSemuaJurnal() {
         if (daftarJurnal.isEmpty()) {
-            System.out.println("Tidak ada jurnal.");
+            System.out.println("Tidak ada jurnal");
         } else {
             for (int i = 0; i < daftarJurnal.size(); i++) {
                 System.out.println((i + 1) + ". ");
@@ -69,12 +69,12 @@ public class Main {
 
     static void bacaIsiJurnal() {
         if (daftarJurnal.isEmpty()) {
-            System.out.println("Tidak ada jurnal.");
+            System.out.println("Tidak ada jurnal");
             return;
         }
 
         lihatSemuaJurnal();
-        System.out.print("Pilih nomor jurnal untuk membaca isinya: ");
+        System.out.print("Pilih jurnal: ");
         int index = scanner.nextInt();
         scanner.nextLine();
         System.out.println("======================");
@@ -83,13 +83,13 @@ public class Main {
             Jurnal jurnalDipilih = daftarJurnal.get(index - 1);
             jurnalDipilih.tampilkanIsiLengkap();
         } else {
-            System.out.println("Nomor jurnal tidak valid.");
+            System.out.println("invalid");
         }
     }
 
     static void editJurnal() {
         if (daftarJurnal.isEmpty()) {
-            System.out.println("Tidak ada jurnal.");
+            System.out.println("Tidak ada jurnal");
             return;
         }
 
@@ -122,13 +122,13 @@ public class Main {
 
             System.out.println("Jurnal berhasil diupdate!");
         } else {
-            System.out.println("Nomor jurnal tidak valid.");
+            System.out.println("invalid");
         }
     }
 
     static void hapusJurnal() {
         if (daftarJurnal.isEmpty()) {
-            System.out.println("Tidak ada jurnal.");
+            System.out.println("Tidak ada jurnal");
             return;
         }
 
@@ -141,7 +141,7 @@ public class Main {
             daftarJurnal.remove(index - 1);
             System.out.println("Jurnal berhasil dihapus!");
         } else {
-            System.out.println("Nomor jurnal tidak valid.");
+            System.out.println("invalid");
         }
     }
 }
